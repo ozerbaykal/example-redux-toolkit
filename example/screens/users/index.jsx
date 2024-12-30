@@ -1,18 +1,23 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import defaultSreenStyle from '../../styles/defaultScreenStyle';
 import {useSelector} from 'react-redux';
+import UserCard from '../../components/users/userCard';
+import FloatActionButton from '../../components/ui/floatActionButton';
 
 const Users = () => {
-  const {title} = useSelector(store => store.users);
+  const {users} = useSelector(store => store.users);
 
   return (
     <View style={defaultSreenStyle.container}>
-      <Text>{title} </Text>
+      <FlatList
+        data={users}
+        renderItem={({item}) => <UserCard user={item} />}
+      />
+
+      <FloatActionButton />
     </View>
   );
 };
 
 export default Users;
-
-const styles = StyleSheet.create({});
