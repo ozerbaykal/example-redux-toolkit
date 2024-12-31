@@ -13,7 +13,7 @@ const AddNewUser = () => {
       <Input title="E-mail" placeholder="Lütfen bir email giriniz" />
       <Input title="Gender" placeholder="Lütfen bir gender giriniz" />
       <Input title="Age" placeholder="Lütfen bir yaş giriniz" />
-      <Button title="Save" />
+      <Button title="Save" status="success" />
     </View>
   );
 };
