@@ -18,6 +18,11 @@ const inputStyle = StyleSheet.create({
         borderRadius: 8,
         fontWeight: '400',
     },
+    error: {
+        marginTop: 5,
+        color: themeColors.RED,
+
+    }
 
 
 })
