@@ -4,12 +4,17 @@ import userCardStyle from '../../styles/userCardStyle';
 import {compareName, getInitialNameSurname} from '../../utils/functions';
 import {ArrowRight} from 'iconsax-react-native';
 import themeColors from '../../themes/themeColors';
+import {useNavigation} from '@react-navigation/native';
+import {USERDETAIL} from '../../utils/routes';
 
 const UserCard = ({user}) => {
   const {container, avatarContainer, avatarTitle, nameContainer, name, icon} =
     userCardStyle;
+  const navigation = useNavigation();
   return (
-    <Pressable style={container}>
+    <Pressable
+      onPress={() => navigation.navigate(USERDETAIL, {user: user})}
+      style={container}>
       <View>
         <View style={avatarContainer}>
           <Text style={avatarTitle}>

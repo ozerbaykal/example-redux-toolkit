@@ -7,7 +7,7 @@ const buttonStyle = StyleSheet.create({
     padding: 10,
     borderRadius: 8,
     paddingVertical: 15,
-    margin: 1
+    marginBottom: 20
 
 
   },
