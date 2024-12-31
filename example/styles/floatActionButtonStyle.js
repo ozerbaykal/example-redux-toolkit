@@ -12,7 +12,7 @@ const floatActionButtonStyle = StyleSheet.create({
         alignItems: "center",
         borderRadius: 100,
         position: "absolute",
-        bottom: 20,
+        bottom: 40,
         right: 20
     }
 })

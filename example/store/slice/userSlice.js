@@ -2,30 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     users: [
-        {
-            id: 1,
-            name: "Ahmet",
-            surname: "Kozan",
-            age: "33",
-            adress: "istanbul/tuzla",
-            phone: "04948484848",
-            email: "test@test.com",
-            profilImage: "",
-            gender: "erkek",
 
-        },
-        {
-            id: 2,
-            name: "Ahmet",
-            surname: "Kozan",
-            age: "33",
-            adress: "istanbul/tuzla",
-            phone: "04948484848",
-            email: "test@test.com",
-            profilImage: "",
-            gender: "erkek",
 
-        },
 
     ],
 

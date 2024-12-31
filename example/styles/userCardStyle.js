@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import themeColors from "../themes/themeColors";
+import { getRandomColor } from "../utils/functions";
 
 const userCardStyle = StyleSheet.create({
     container: {
@@ -21,7 +22,7 @@ const userCardStyle = StyleSheet.create({
         borderRadius: 50,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "yellow"
+        backgroundColor: getRandomColor()
 
 
     },
