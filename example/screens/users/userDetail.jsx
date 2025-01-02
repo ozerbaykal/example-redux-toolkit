@@ -9,7 +9,7 @@ import Button from '../../components/ui/button';
 import {useDispatch} from 'react-redux';
 import {deleteUser} from '../../store/slice/userSlice';
 import {useNavigation} from '@react-navigation/native';
-import {USERS} from '../../utils/routes';
+import {UPDATEUSER, USERS} from '../../utils/routes';
 
 const UserDetail = ({route}) => {
   const dispatch = useDispatch();
@@ -58,7 +58,11 @@ const UserDetail = ({route}) => {
         </View>
         <View style={userDetailStyle.button}>
           <Button onPress={handleDelete} title="Delete" status="warning" />
-          <Button title="Update User" status="info" />
+          <Button
+            title="Update User"
+            status="info"
+            onPress={() => navigation.navigate(UPDATEUSER, {updateUser: user})}
+          />
         </View>
       </ScrollView>
     </View>

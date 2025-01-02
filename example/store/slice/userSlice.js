@@ -31,7 +31,27 @@ const userSlice = createSlice({
 
 
 
+        },
+
+        updatedUser: (state, action) => {
+
+            const userToUpdate = state.users.find((user) => user.id === action.payload.id)
+
+            if (!userToUpdate) {
+                Alert.alert("Hata", "Kullanıcı bulunamadı");
+                return;
+            }
+            const updateUser = { ...userToUpdate, ...action.payload }
+
+            state.users = state.users.map((user) => user.id === action.payload.id ? updateUser : user)
+
+
+
+
+            Alert.alert(" Kullanıcı Güncellendi ")
         }
+
+
 
 
 
@@ -45,5 +65,5 @@ const userSlice = createSlice({
 })
 
 
-export const { addNewUser, deleteUser } = userSlice.actions;
+export const { addNewUser, deleteUser, updatedUser } = userSlice.actions;
 export default userSlice.reducer
