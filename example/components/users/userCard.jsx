@@ -25,7 +25,7 @@ const UserCard = ({user}) => {
 
       <View style={nameContainer}>
         <Text style={name}>{compareName(user.name, user.surname)}</Text>
-        <Text style={name}>{user.email}</Text>
+        <Text style={name}>{user?.email}</Text>
       </View>
       <View style={icon}>
         <ArrowRight size={25} color={themeColors.GRAY} />

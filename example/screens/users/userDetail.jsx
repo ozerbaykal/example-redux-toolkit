@@ -3,15 +3,26 @@ import React from 'react';
 import defaultSreenStyle from '../../styles/defaultScreenStyle';
 import {compareName, getInitialNameSurname} from '../../utils/functions';
 import userCardStyle from '../../styles/userCardStyle';
-import themeColors from '../../themes/themeColors';
 import userDetailStyle from '../../styles/userDetailStyle';
 import {Calendar, Call, Man, Sms, Woman} from 'iconsax-react-native';
 import Button from '../../components/ui/button';
+import {useDispatch} from 'react-redux';
+import {deleteUser} from '../../store/slice/userSlice';
+import {useNavigation} from '@react-navigation/native';
+import {USERS} from '../../utils/routes';
 
 const UserDetail = ({route}) => {
+  const dispatch = useDispatch();
   const {container, avatarContainer, avatarTitle, nameContainer, name, icon} =
     userCardStyle;
   const {user} = route.params;
+  const navigation = useNavigation();
+
+  const handleDelete = () => {
+    dispatch(deleteUser(user.id));
+
+    navigation.navigate(USERS);
+  };
 
   return (
     <View style={defaultSreenStyle.container}>
@@ -46,7 +57,7 @@ const UserDetail = ({route}) => {
           </View>
         </View>
         <View style={userDetailStyle.button}>
-          <Button title="Delete" status="warning" />
+          <Button onPress={handleDelete} title="Delete" status="warning" />
           <Button title="Update User" status="info" />
         </View>
       </ScrollView>

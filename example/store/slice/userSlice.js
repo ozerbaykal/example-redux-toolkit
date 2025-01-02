@@ -20,9 +20,19 @@ const userSlice = createSlice({
         addNewUser: (state, action) => {
 
             state.users = [...state.users, action.payload]
-            Alert.alert("Kullaıcı başarılı bir şekilde eklendi")
+            Alert.alert("Kullanıcı başarılı bir şekilde eklendi")
+
+        },
+        deleteUser: (state, action) => {
+
+            state.users = state.users.filter((user) => user.id !== action.payload)
+
+            Alert.alert("Kullanıcı kaldırıldı")
+
+
 
         }
+
 
 
 
@@ -35,5 +45,5 @@ const userSlice = createSlice({
 })
 
 
-export const { addNewUser } = userSlice.actions;
+export const { addNewUser, deleteUser } = userSlice.actions;
 export default userSlice.reducer
