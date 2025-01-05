@@ -1,11 +1,12 @@
 import {FlatList, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import defaultSreenStyle from '../../styles/defaultScreenStyle';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import UserCard from '../../components/users/userCard';
 import FloatActionButton from '../../components/ui/floatActionButton';
 import {ADDNEWUSER} from '../../utils/routes';
 import {useNavigation} from '@react-navigation/native';
+import {getUser} from '../../store/actions/userActions';
 
 const Users = () => {
   const navigation = useNavigation();

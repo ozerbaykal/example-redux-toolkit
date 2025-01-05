@@ -15,6 +15,15 @@ const userCardStyle = StyleSheet.create({
 
 
     },
+    avatarImage: {
+        width: 70,
+        height: 70,
+        borderWidth: 1,
+        borderRadius: 50,
+        resizeMode: "contain"
+
+
+    },
     avatarContainer: {
         width: 70,
         height: 70,

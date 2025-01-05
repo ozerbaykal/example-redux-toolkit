@@ -4,9 +4,9 @@ const compareName = (name, surname) => {
 }
 
 const getInitialNameSurname = (name, surname) => {
-    const nameInitial = name[0].toUpperCase();
-    const surnameInitial = surname[0].toUpperCase();
-    return nameInitial + surnameInitial;
+    // const nameInitial = name[0].toUpperCase();
+    // const surnameInitial = surname[0].toUpperCase();
+    // return nameInitial + surnameInitial;
 
 
 }

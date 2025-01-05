@@ -1,14 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { Alert } from "react-native";
+import { getUser } from "../actions/userActions";
+import { get } from "react-native/Libraries/TurboModule/TurboModuleRegistry";
 
 const initialState = {
     users: [
-
-
-
     ],
+    pending: false,
+    error: ""
 
-    title: "redux toolkit",
+
 }
 
 const userSlice = createSlice({
@@ -56,6 +57,22 @@ const userSlice = createSlice({
 
 
 
+    },
+
+    extraReducers: builder => {
+
+        builder.addCase(getUser.pending, state => {
+            state.pending = true
+        })
+            .addCase(getUser.fulfilled, (state, action) => {
+                //console.log(action.payload)
+                state.users = action.payload.results
+                state.pending = false
+            })
+            .addCase(getUser.rejected, (state, action) => {
+                state.error = action.error
+                state.pending = false
+            })
     }
 
 
