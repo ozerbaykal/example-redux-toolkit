@@ -4,8 +4,8 @@ import { BASE_URL } from "../../service/urls";
 
 const getUser = createAsyncThunk(
     "users/getUser",
-    async () => {
-        const response = await getRequest(BASE_URL)
+    async (params) => {
+        const response = await getRequest(BASE_URL, params)
         //console.log(response.data.results)
         return response.data
     }

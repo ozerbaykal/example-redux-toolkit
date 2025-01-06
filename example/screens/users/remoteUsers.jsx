@@ -22,7 +22,7 @@ const RemoteUsers = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getUser());
+    dispatch(getUser({results: 10}));
   }, []);
 
   return (
@@ -37,6 +37,7 @@ const RemoteUsers = () => {
             </Text>
           }
           data={users}
+          keyExtractor={item => item.email}
           renderItem={({item}) => <RemoteUserCard user={item} />}
         />
       )}

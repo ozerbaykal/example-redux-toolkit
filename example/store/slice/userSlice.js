@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { Alert } from "react-native";
 import { getUser } from "../actions/userActions";
-import { get } from "react-native/Libraries/TurboModule/TurboModuleRegistry";
 
 const initialState = {
     users: [

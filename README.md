@@ -1,79 +1,133 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# User List Application
 
-# Getting Started
+This is a simple User List application built with React Native and Redux Toolkit. The application uses the RandomUser API to fetch and display user data, allowing you to manage user information with features such as delete and update.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Screenshots 🖼️
 
-## Step 1: Start the Metro Server
+### Video GIF
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+![](./example/assets/userList.gif)
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### userList
 
-```bash
-# using npm
-npm start
+![](./example/assets/userList.png)
 
-# OR using Yarn
-yarn start
+### addNewUser
+
+![](./example/assets/addNewUser.png)
+
+### userDetail
+
+![](./example/assets/userDetail.png)
+
+## Features
+
+- Fetch Users: Fetch random user data from the RandomUser API using asynchronous actions with Redux Thunk.
+
+- List Users: Display the fetched user data in a list.
+
+- Delete Users: Remove a user from the list.
+
+- Update Users: Edit and update user details.
+
+- React Navigation: Navigate seamlessly between screens in the application.
+
+## Technologies Used
+
+- React Native: Frontend framework for building mobile applications.
+
+- Redux Toolkit: State management solution with built-in support for asynchronous operations.
+
+- Redux Thunk: Middleware for handling asynchronous actions.
+
+- Axios: Library for making HTTP requests.
+
+- Formik: Form management library.
+
+- Yup: Validation library used with Formik.
+
+## How It Works
+
+1. ### Fetching Data:
+
+- The app fetches random user data from the RandomUser API using axios.
+
+- Redux Thunk is used to handle asynchronous API requests.
+
+2. ### State Management:
+
+- Redux Toolkit manages the global state for user data.
+
+- Actions and reducers are used for operations like fetching, updating, and deleting users.
+
+3. ### Navigation:
+
+- @react-navigation/native and @react-navigation/native-stack are used for navigating between screens.
+
+4. ### Form Handling:
+
+- Formik is used for managing forms and handling user input.
+
+- Yup provides schema-based validation for form fields.
+
+## Installation
+
+Follow these steps to run the project on your local machine:
+
+Clone the Repository:
+
+```
+git clone https://github.com/ozerbaykal/example-redux-toolkit.git
 ```
 
-## Step 2: Start your Application
+Navigate to the Project Directory:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```
+cd example-redux-toolkit
 ```
 
-### For iOS
+Install Dependencies:
 
-```bash
-# using npm
-npm run ios
+```
+npm install
 
-# OR using Yarn
-yarn ios
+# or
+
+yarn install
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+Start the Metro Bundler:
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+```
+npx react-native start
+```
 
-## Step 3: Modifying your App
+Run the Application:
 
-Now that you have successfully run the app, let's modify it.
+For iOS:
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+```
+npx react-native run-ios
+```
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+For Android:
 
-## Congratulations! :tada:
+```
+npx react-native run-android
+```
 
-You've successfully run and modified your React Native App. :partying_face:
+## Contributing
 
-### Now what?
+Contributions are welcome! Please open an issue first to discuss what you would like to change.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+- 1.Fork the project
+- 2.Create your feature branch (git checkout -b feature/NewFeature)
+- 3.Commit your changes (git commit -m 'Add new feature')
+- 4.Push to the branch (git push origin feature/NewFeature)
+- 5.Open a Pull Request
 
-# Troubleshooting
+## Contact 📬
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Özer BAYKAL**  
+Email: [baykalozer87@gmail.com](mailto:baykalozer87@gmail.com)  
+Project Link: [example-redux-toolkit](https://github.com/ozerbaykal/example-redux-toolkit)
